@@ -17,7 +17,7 @@ def get_soup(url):
 
 def get_proxies():
     proxies = []
-    '''
+
     soup = get_soup(URL)
     if soup:
         proxy_data = soup.text.split("\n")
@@ -26,14 +26,13 @@ def get_proxies():
                 proxy_ip = data.split('|')
                 ip = proxy_ip[0]
                 proxies.append(ip)
+        print('\nTotal proxies returned by cagriari.com {}', format(str(len(proxies))))
         return proxies
     else:
         print("proxy error")
-    '''
-    # cagriari proxies are out dated does not changed on short time period
-    # we have decided to not this source any more
-
+    
     return proxies
+
 
 if __name__ == "__main__":
     get_proxies()
