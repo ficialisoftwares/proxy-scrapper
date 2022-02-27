@@ -26,11 +26,13 @@ def get_proxies():
                 proxy_ip = data.split('|')
                 ip = proxy_ip[0]
                 proxies.append(ip)
+        print('\nTotal proxies returned by cagriari.com {}', format(str(len(proxies))))
         return proxies
     else:
         print("proxy error")
-
+    
     return proxies
+
 
 if __name__ == "__main__":
     get_proxies()

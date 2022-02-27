@@ -33,6 +33,7 @@ def get_proxies():
             print("proxy error")
     proxies = set(proxies)
     proxies = list(proxies)
+    print('\nTotal proxies returned by proxy_list {}'.format(str(len(proxies))))
     return proxies
 
 
