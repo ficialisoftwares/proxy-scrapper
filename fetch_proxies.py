@@ -28,6 +28,9 @@ def add_new_proxies():
         ip_count = 0
         for proxy_address in proxies:
             try:
+               
+                cursor.execute("SET SESSION time_zone = %s",('+5:00',))
+                 
                 cursor.execute(
                     "SELECT ip, COUNT(*) FROM proxy WHERE ip = %s GROUP BY ip",
                     (proxy_address,)
